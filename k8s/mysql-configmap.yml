@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+data:
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_DATABASE: mydb
+  MYSQL_USER: Rishi
+  MYSQL_PASSWORD: Rishi@123
+
