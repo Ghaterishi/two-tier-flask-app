@@ -27,7 +27,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mysql-secret
-                  key: MYSQL_ROOT_PASSWORD
+                  key: MYSQL_PASSWORD
             - name: MYSQL_DB  # Add this line to set the MYSQL_DB environment variable
               valueFrom:
                 configMapKeyRef:
