@@ -16,20 +16,15 @@ spec:
         - name: mysql
           image: mysql:latest
           env:
-            - name: MYSQL_PASSWORD
+            - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mysql-secret
-                  key: MYSQL_PASSWORD
+                  key: MYSQL_ROOT_PASSWORD
             - name: MYSQL_DATABASE
               valueFrom:
                 configMapKeyRef:
                   name: mysql-config
                   key: MYSQL_DATABASE
-            - name: MYSQL_USER
-              valueFrom:
-                configMapKeyRef:
-                  name: mysql-config
-                  key: MYSQL_USER
           ports:
             - containerPort: 3306

@@ -17,7 +17,7 @@ spec:
           image: rishi93rich/two-tier-flask-app:latest
           env:
             - name: MYSQL_HOST
-              value: mysql-service   # Use the MySQL service name
+              value: 10.98.73.14   # Use the MySQL service name
             - name: MYSQL_USER
               valueFrom:
                 configMapKeyRef:
@@ -27,7 +27,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mysql-secret
-                  key: MYSQL_PASSWORD
+                  key: MYSQL_ROOT_PASSWORD
             - name: MYSQL_DB  # Add this line to set the MYSQL_DB environment variable
               valueFrom:
                 configMapKeyRef:
